@@ -6,7 +6,12 @@
 {% block main %}
 
 {% block login %}
-<div id="login-main" class="container">
+<div id="login-main" class="container" style=>
+<div style="display:table-cell; vertical-align:middle; text-align:center;">
+<img width=350px src="/static/images/kwant_logo.png" style="display:block; margin: auto auto"/>
+<div style="font-size:5em;">+</div>
+<img width=350px src="/static/images/jupyterhub-80.png" style="display:block; margin: auto auto"/>
+</div>
 {% if custom_html %}
 {{ custom_html }}
 {% elif login_service %}
@@ -16,7 +21,8 @@
   </a>
 </div>
 {% else %}
-<form action="{{login_url}}?next={{next}}" method="post" role="form">
+<div style="display:table-cell; vertical-align:middle;">
+<form action="{{login_url}}?next={{next}}" method="post" role="form" style="display:block;margin-bottom: 0;">
   <div class="auth-form-header">
     Sign in
   </div>
@@ -56,6 +62,7 @@
     />
   </div>
 </form>
+</div>
 {% endif %}
 </div>
 {% endblock login %}
